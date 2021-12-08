@@ -1,0 +1,13 @@
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/build/CMakeFiles/rebuild_cache.dir
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/build/CMakeFiles/edit_cache.dir
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/build/libs/CMakeFiles/rebuild_cache.dir
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/build/libs/CMakeFiles/edit_cache.dir
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/build/libs/QR-Code-generator/CMakeFiles/rebuild_cache.dir
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/build/libs/QR-Code-generator/CMakeFiles/edit_cache.dir
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/build/libs/QR-Code-generator/CMakeFiles/qr-code-generator.dir
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/build/libs/tinypngout/CMakeFiles/rebuild_cache.dir
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/build/libs/tinypngout/CMakeFiles/edit_cache.dir
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/build/libs/tinypngout/CMakeFiles/tinypngoutput.dir
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/build/src/CMakeFiles/rebuild_cache.dir
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/build/src/CMakeFiles/edit_cache.dir
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/build/src/CMakeFiles/qr-to-png.dir

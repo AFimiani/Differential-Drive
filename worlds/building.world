@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<sdf  version="1.7">
+
+    
+    <world name="default">
+        <scene>
+            <shadows>0</shadows>  
+        </scene>
+        <physics type="ode">
+        <gravity>0 0 -9.81</gravity>
+        <ode>
+            <solver>
+            <type>quick</type>
+            <iters>20</iters>
+            <sor>1.0</sor>
+            </solver>
+            <constraints>
+            <cfm>0.0</cfm>
+            <erp>0.2</erp>
+            <contact_max_correcting_vel>100.0</contact_max_correcting_vel>
+            <contact_surface_layer>0.0</contact_surface_layer>
+            </constraints>
+        </ode>
+        <real_time_update_rate>1000</real_time_update_rate>
+        <max_step_size>0.001</max_step_size>
+        </physics>
+        
+        <!-- A global light source -->
+        <include>
+        <uri>model://sun</uri>
+        </include>
+        <!-- A ground plane -->
+        <include>
+        <uri>model://ground_plane</uri>
+        </include>
+
+        <!-- import ground floor model-->
+        <include>
+            <uri>model://floor</uri>
+            <name>floor</name>
+            <pose>7 7 0 0 0 0 </pose>
+        </include>
+
+        <!--External perimeter-->
+        <include>
+            <uri>model://wall_f</uri>
+            <name>Wall Left F</name>
+            <pose>0 5.5 0 0 0 1.570796327</pose>
+        </include>
+        <include>
+            <uri>model://wall_f</uri>
+            <name>Wall Right F</name>
+            <pose>14 5.5 0 0 0 1.570796327</pose>
+        </include>
+        <include>
+            <uri>model://wall_e</uri>
+            <name>Wall Down E</name>
+            <pose>7 0 0 0 0 0</pose>
+        </include>
+        <include>
+            <uri>model://wall_a</uri>
+            <name>Wall UP Left A</name>
+            <pose>2 11 0 0 0 0</pose>
+        </include>
+        <include>
+            <uri>model://wall_a</uri>
+            <name>Wall UP Right A</name>
+            <pose>12 11 0 0 0 0</pose>
+        </include>
+        <include>
+            <uri>model://wall_b</uri>
+            <name>Wall UP Left B</name>
+            <pose>4 12.5 0 0 0 1.570796327</pose>
+        </include>        
+        <include>
+            <uri>model://wall_b</uri>
+            <name>Wall UP Right B</name>
+            <pose>10 12.5 0 0 0 1.570796327</pose>
+        </include>   
+        <include>
+            <uri>model://wall_c</uri>
+            <name>Wall UP C</name>
+            <pose>7 14 0 0 0 0</pose>
+        </include> 
+
+        <!-- room A1 -->
+        <include>
+            <uri>model://wall_a</uri>
+            <name>Wall A1</name>
+            <pose>2 5 0 0 0 0</pose>
+        </include> 
+        <include>
+            <uri>model://wall_d</uri>
+            <name>Wall D1_1</name>
+            <pose>4 10 0 0 0 1.570796327</pose>
+        </include> 
+        <include>
+            <uri>model://wall_d</uri>
+            <name>Wall D1_2</name>
+            <pose>4 6 0 0 0 1.570796327</pose>
+        </include> 
+
+        <!-- room A2 -->
+        <include>
+            <uri>model://wall_d</uri>
+            <name>Wall D2_1</name>
+            <pose>5 11 0 0 0 0</pose>
+        </include> 
+        <include>
+            <uri>model://wall_d</uri>
+            <name>Wall D2_2</name>
+            <pose>9 11 0 0 0 0</pose>
+        </include> 
+
+        <!-- room A3 -->
+        <include>
+            <uri>model://wall_a</uri>
+            <name>Wall A3_2</name>
+            <pose>12 3 0 0 0 0</pose>
+        </include> 
+        <include>
+            <uri>model://wall_d</uri>
+            <name>Wall D3</name>
+            <pose>10 3 0 0 0 1.570796327</pose>
+        </include> 
+        <include>
+            <uri>model://wall_a</uri>
+            <name>Wall A3_1</name>
+            <pose>10 9 0 0 0 1.570796327</pose>
+        </include> 
+
+        <!-- room S -->
+        <include>
+            <uri>model://wall_b</uri>
+            <name>Wall BS2</name>
+            <pose>3.5 3 0 0 0 0</pose>
+        </include> 
+        <include>
+            <uri>model://wall_b</uri>
+            <name>Wall BS1</name>
+            <pose>2 1.5 0 0 0 1.570796327</pose>
+        </include> 
+        <include>
+            <uri>model://wall_b</uri>
+            <name>Wall BS3</name>
+            <pose>7 1.5 0 0 0 1.570796327</pose>
+        </include> 
+
+        
+
+        
+        <!-- QR Markers-->
+        <include>
+            <uri>model://marker_1</uri>
+            <name>Marker id1 </name>
+            <pose>0.05 5.5 0.3 0 0 1.570796327</pose>
+        </include>
+        <include>
+            <uri>model://marker_2</uri>
+            <name>Marker id2 </name>
+            <pose>9.9 12.3 0.3 0 0 1.57</pose>
+        </include>
+        <include>
+            <uri>model://marker_3</uri>
+            <name>Marker id3 </name>
+            <!-- <pose>13.95 6 0.3 0 0 1.570796327</pose> -->
+            <pose>10.05 3.7 0.3 0 0 1.570796327</pose>
+        </include>
+
+    
+
+
+
+
+        <!-- Obstacles -->
+        <include>
+            <uri>model://cardboard_box</uri>
+            <name>cardboard_box</name>
+            <pose>5.5 4.3 0.2 0 0 0 </pose>
+        </include>
+        <include>
+            <uri>model://cardboard_box</uri>
+            <name>cardboard_box2</name>
+            <pose>7.5 6 0.2 0 0 0 </pose>
+        </include>
+        <include>
+            <uri>model://cardboard_box</uri>
+            <name>cardboard_box3</name>
+            <pose>8 6.2 0.2 0 0 0 </pose>
+        </include>
+        <include>
+            <uri>model://cardboard_box</uri>
+            <name>cardboard_box4</name>
+            <pose>7.5 6.4 0.2 0 0 0 </pose>
+        </include>
+        <include>
+            <uri>model://cardboard_box</uri>
+            <name>cardboard_box5</name>
+            <pose>7.62 6.22 0.5 0 0 -0.43 </pose>
+        </include>
+        
+       
+        <include>
+            <uri>model://person_standing</uri>
+            <name>person_standing</name>
+            <pose>7 9 0.04 0 0 0 </pose>
+        </include>
+       
+
+    </world>
+</sdf>

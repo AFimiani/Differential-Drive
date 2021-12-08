@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtinypngoutput.a  CMakeFiles/tinypngoutput.dir/TinyPngOut.cpp.o
+/usr/bin/ranlib libtinypngoutput.a

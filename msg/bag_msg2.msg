@@ -1,0 +1,12 @@
+float64 x
+float64 y
+float64 yaw
+float64 vel_x
+float64 vel_y
+float64 w
+float64 x_gaz
+float64 y_gaz
+float64 yaw_gaz
+float64 vel_x_gaz
+float64 vel_y_gaz
+float64 w_gaz

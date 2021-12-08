@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/qr-to-png.dir/QrToPng.cpp.o CMakeFiles/qr-to-png.dir/main.cpp.o  -o qr-to-png  -lstdc++fs ../libs/tinypngout/libtinypngoutput.a ../libs/QR-Code-generator/libqr-code-generator.a 

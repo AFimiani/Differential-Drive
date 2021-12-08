@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/libs/tinypngout/TinyPngOut.cpp
+algorithm
+-
+cassert
+-
+limits
+-
+stdexcept
+-
+TinyPngOut.hpp
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/libs/tinypngout/TinyPngOut.hpp
+
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/libs/tinypngout/TinyPngOut.hpp
+cstddef
+-
+cstdint
+-
+ostream
+-
+

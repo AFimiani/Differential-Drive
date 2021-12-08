@@ -1,0 +1,2 @@
+/usr/bin/ar qc libqr-code-generator.a  CMakeFiles/qr-code-generator.dir/QrCode.cpp.o
+/usr/bin/ranlib libqr-code-generator.a

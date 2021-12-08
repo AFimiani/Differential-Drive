@@ -1,0 +1,18 @@
+material vrc/marker2
+{
+	technique
+	{
+		pass
+		{
+
+
+			texture_unit
+			{
+				texture QR_2.png
+				filtering anistropic
+				max_anisotropy 16
+				scale 1 1
+			}
+		}
+	}
+}

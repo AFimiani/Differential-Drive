@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/libs/QR-Code-generator/QrCode.cpp
+algorithm
+-
+climits
+-
+cstddef
+-
+cstdlib
+-
+cstring
+-
+sstream
+-
+stdexcept
+-
+utility
+-
+QrCode.hpp
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/libs/QR-Code-generator/QrCode.hpp
+
+/home/andrea/ros_workspace/src/progetto_esame/cpp-qr-to-png-master/libs/QR-Code-generator/QrCode.hpp
+array
+-
+cstdint
+-
+stdexcept
+-
+string
+-
+vector
+-
+

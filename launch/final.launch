@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <arg name= "world" default="$(find progetto_esame)/worlds/building.world"/>
+    <arg name="gui" default="true"/> 
+    <arg name="debug" default="false"/> 
+    <arg name="paused" default="true"/> 
+    <arg name="use_sim_time" default="true"/> 
+    <arg name="headless" default="false"/> 
+	<arg name="model" default="$(find progetto_esame)/urdf/roomba.xacro"/>
+    <arg name="rvizconfig" default="$(find progetto_esame)/rviz/my_robot.rviz" />
+
+    <env name="GAZEBO_MODEL_PATH" value="$(find progetto_esame)/models:$(optenv GAZEBO_MODEL_PATH)" />
+
+    <!-- Start up world-->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg world)"/>
+		<arg name="gui" value="$(arg gui)"/>
+        <arg name="debug" value="$(arg debug)"/>
+        <arg name="paused" value="$(arg paused)" />
+        <arg name="use_sim_time" value="$(arg use_sim_time)" />
+        <arg name="headless" value="$(arg headless)" />
+    </include>
+    
+  	<param name="robot_description" command="$(find xacro)/xacro $(arg model) color:=white" />
+    
+    <arg name="x0" value="5.5" />
+    <arg name="y0" value="1.5" />
+    <arg name="yaw0" value="1.570796327" />
+
+    <!-- final position for the robot, better to initialize these equal to starting values  -->
+    <param name="xf" value="5.5"/>  
+    <param name="yf" value="1.5"/>
+
+    <param name="id_wanted"  value="id1" /> <!--possible value: id1 id2 id3 --> 
+    <!--please notice that this param is read only at the start of the simulation--> 
+
+	<!-- spawn robot in gazebo -->
+	<node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-urdf -model my_robot -param robot_description -x $(arg x0) -y $(arg y0) -z 0.050750 -R 0.0 -P 0.0 -Y $(arg yaw0)" />
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" ns="/my_robot"/>	
+
+ 	<!-- Open Rviz - required="false" : if the program is closed, the simulation doesn't shutdown -->
+ 	<node name="rviz" pkg="rviz"  type="rviz" args="-d $(arg rvizconfig)"  required="false" />
+
+    <!--ROS control-->
+    <rosparam file="$(find progetto_esame)/conf/controller.yaml" command="load"/>
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/my_robot" 
+        args="joint_state_controller joint_left_controller joint_right_controller" />
+
+    <!--ODOM NODE-->
+    <node name="odom_node" pkg="progetto_esame" type="odom_node"  respawn="false" output="screen" args="$(arg x0) $(arg y0) $(arg yaw0)"/>
+
+    <!--PLANNER NODE-->
+    <node name="planner_node" pkg="progetto_esame" type="planner_node"  respawn="false" output="screen" args="$(arg x0) $(arg y0) $(arg yaw0)"/> 
+    
+    <!--CTRL NODE-->
+    <node name="ctrl_node" pkg="progetto_esame" type="ctrl_node"  respawn="false" output="screen" args="$(arg x0) $(arg y0) $(arg yaw0)"/> 
+
+    <!--Gmapping-->
+    <include file="$(find progetto_esame)/launch/gmapping.launch"/>
+
+    <!--CAMERA NODE-->
+    <node name="opencv_node" pkg="progetto_esame" type="opencv_node"  respawn="false" output="screen"/> 
+
+</launch>
