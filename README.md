@@ -1,4 +1,4 @@
-﻿Differential-Drive Robot --- Techincal project #2
+﻿Differential-Drive Robot --- Technical project #2
 ====================================
 
 This Repository contains codes for trajecotry planning, localization and control of a differential drive robot.
