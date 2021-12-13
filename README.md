@@ -1,10 +1,13 @@
-﻿Differential-Drive Robot ---Techincal project #2
+﻿Differential-Drive Robot --- Techincal project #2
 ====================================
 
 This Repository contains codes for trajecotry planning, localization and control of a differential drive robot.
 
 The differential drive's URDF used in the package has been created modifying the URDF taken from the following repository 
 > "roomba_robot by goncabrita", [Link](https://github.com/goncabrita/roomba_robot)
+## Simulation video 
+To download the video of the complete exploration:
+>  [Link to the simulation video](https://drive.google.com/file/d/1Dw4lYnRBIIyTnJCxfjGyyukD3-S18ccd/view?usp=sharing)
 ## Requirements
 #### Gmapping
 To save the map inside the simulation is needed Gmapping, to install:
@@ -55,9 +58,9 @@ $ rostopic echo /my_robot/task_status
 	..
 	//------- CASO 1
 	_rooms << 	11, 6, // Room 3 >Room 2 >Room 1 >Start
-				7,11,
-				3,8,
-				x0,y0;
+			7,11,
+			3,8,
+			x0,y0;
 	..
 	}
  To change the starting position, in the *final.launch* file, inside the `launch/` folder,  change the value of the args *x0*,  *y0*, *yaw0* 
