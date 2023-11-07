@@ -1,7 +1,7 @@
-﻿Differential-Drive Robot --- Technical project #2
+Differential-Drive Robot --- Technical project #2
 ====================================
 
-This Repository contains codes for trajecotry planning, localization and control of a differential drive robot.
+This repository comprises code for trajectory planning, localization, and control of a differential drive robot.
 
 The differential drive's URDF used in the package has been created modifying the URDF taken from the following repository 
 > "roomba_robot by goncabrita", [Link](https://github.com/goncabrita/roomba_robot)
